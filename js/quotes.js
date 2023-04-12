@@ -44,22 +44,6 @@ const quotes = [
 const quote=document.querySelector("#quote span:first-child");
 const author=document.querySelector("#quote span:last-child");
 
-// array에 접근
-// Math module 사용
-// Math.random() 0부터 1 사이의 랜덤한 값을 줌
-
-// Math.floor(Math.random()*10);
-
-// 소수점을 가진 flaot은 필요 없다.
-// round(): 반올림.
-// ceil(): 숫자를 천장까지 올려준다.
-// floor(): 숫자를 바닥까지 내려준다.
-
-// quotes 배열에 접근하기
-todaysQuote=quotes[Math.floor(Math.random()*quotes.length)];
-// array의 길이 array.length
-
+const todaysQuote=quotes[Math.floor(Math.random()*quotes.length)];
 quote.innerText=todaysQuote.quote;
-// quote 요소의 텍스트를 todaysQuote의 quote 속성값으로 설정합니다.
 author.innerText=todaysQuote.author;
-//  author 요소의 텍스트를 todaysQuote의 author 속성값으로 설정합니다.
