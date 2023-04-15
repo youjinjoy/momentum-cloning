@@ -35,11 +35,6 @@ function paintToDo(newToDo){
     toDoList.appendChild(li);
 
     button.addEventListener("click",deleteToDo);
-
-    li.appendChild(span);
-    li.appendChild(button);
-
-    toDoList.appendChild(li);
 }
 
 function handleToDoSubmit(event){
@@ -51,7 +46,7 @@ function handleToDoSubmit(event){
     // 이제는 text 대신 object를 push하고 싶다!
     const newToDoObj={
         text:newToDo,
-        id:  Date.now()
+        id:Date.now()
     }
     toDos.push(newToDoObj);
 

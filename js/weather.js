@@ -11,18 +11,24 @@ function onGeoOk(position){
     const url=`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
     // 이제 fetch를 이용해서 url을 얻을 것임.
     fetch(url).then(response => response.json()).then(data => {
-        const weather=document.querySelector("#weather span:first-child");
-        const city=document.querySelector("#weather span:nth-child(2)");
-        // weather,city Container는 span에 날씨,지역을 줄 것이다.
-    
-        weather.innerText=`${data.weather[0].main} / ${data.main.temp}°C`;
-        city.innerText=data.name;
+       const weather=document.querySelector("#info #weather");
+        const city=document.querySelector("#info #loca");
+        const temp=document.querySelector("#info #temp");
 
+        const iconCode=data.weather[0].icon;
+        const iconElement= document.createElement('img');
+        iconElement.setAttribute('src', `http://openweathermap.org/img/wn/${iconCode}.png`);
+        const iconContainer = document.querySelector('#weather-container');
+        iconContainer.prepend(iconElement);
+
+        weather.innerText=data.weather[0].main;
+        city.innerText=data.name;
+        temp.innerText=`${data.main.temp} °C`;
     });
 }
 
 function onGeoError(){
-    alert("Can't find you. No weather for you.")
+    alert("Can't find you. No weather for you.");
 }
 
 // user의 geolocation을 주는 함수. 아래와 같이 하면 브라우저에서 위치 좌표를 준다!

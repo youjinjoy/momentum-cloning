@@ -8,24 +8,35 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <form id="login-form" class="hidden">
-      <input type="text" placehodler="What is your name?" />
-      <button>Log In</button>
-    </form>
-    <h2 id="clock">0:00</h2>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" requried />
-    </form>
-    <ul id="todo-list"></ul>
-    <!--사용자가 입력해야 하므로 form이 필요하다.
-        사용자가 todo를 나열할 수 있어야 하므ㅗㄹ list가 필요하다
-        js로 li를 만들 것이기 때문에 ul까지만 쓰면 ok -->
-    <h1 id="greeting" class="hidden"></h1>
-    <div id="quote">
-      <span></span>
-      <span></span>
+    <div id="info" class="screen-header">
+      <div id="loca-temp-container">
+        <div id="temp"></div>
+        <div id="loca"></div>
+      </div>
+      <div id="weather-container">
+        <span id="weather"></span>
+      </div>
     </div>
-    <div id="weather">
+    <div class="screen-main">
+      <h2 id="clock">0:00</h2>
+      <h1 id="greeting" class="hidden"></h1>
+      <form id="login-form" class="hidden">
+        <input type="text" placehodler="What is your name?" />
+        <button>Log In</button>
+      </form>
+      <form id="todo-form">
+        <input
+          type="text"
+          placeholder="Write a To Do and Press Enter"
+          requried
+        />
+      </form>
+      <ul id="todo-list"></ul>
+      <!--사용자가 입력해야 하므로 form이 필요하다.
+        사용자가 todo를 나열할 수 있어야 하므로 list가 필요하다
+        js로 li를 만들 것이기 때문에 ul까지만 쓰면 ok -->
+    </div>
+    <div id="quote">
       <span></span>
       <span></span>
     </div>
@@ -35,5 +46,9 @@
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script
+      src="https://kit.fontawesome.com/612dc86cae.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
