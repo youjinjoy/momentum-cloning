@@ -87,13 +87,13 @@ body{
     border-bottom: 2px white solid;
 
     margin-bottom: 10px;
-    padding: 10px 0;
+    padding: 10px 15px;
     color: white;
 }
 #todo-form input::placeholder{
     color:white;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
 }
 #todo-form input:focus::placeholder{
     opacity: 0.5;
@@ -140,12 +140,14 @@ body{
     margin-bottom: 30px;
 }
 #login-form input{
-    width: 150px;
+    width: 170px;
     height:50px;
 
     border-radius: 7px;
     padding: 0 10px;
     background-color: rgba(0,0,0,0.2);
+    color:white;
+
 }
 #login-form input:focus, #login-form input:hover{
     background-color: rgba(0,0,0,0.4);
