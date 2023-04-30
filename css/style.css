@@ -49,7 +49,6 @@ body{
     margin-top: 15px;
     margin-bottom: 9px;
 }
-#loca{}
 #weather-container{
     display: flex;
     flex-direction: column;
@@ -66,13 +65,19 @@ body{
     position: absolute;
     bottom: 5px;
 }
+#date{
+    font-size: 30px;
+    font-weight: 600;
+}
 #clock{
-    font-size: 80px;
+    font-size: 90px;
     margin: 20px 0;
+
+    font-weight: 600;
 }
 #greeting{
-    font-size: 30px;
-    margin: 20px 0;
+    font-size: 50px;
+    margin-bottom: 40px;
 }
 #todo-form input{
     background-color: transparent;
@@ -82,14 +87,16 @@ body{
     border-bottom: 2px white solid;
 
     margin-bottom: 10px;
+    padding: 10px 0;
+    color: white;
 }
 #todo-form input::placeholder{
     color:white;
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
 }
 #todo-form input:focus::placeholder{
-opacity: 0.5;
+    opacity: 0.5;
 }
 #todo-form input:hover{
     background-color: rgba(0,0,0,0.2);
@@ -157,4 +164,5 @@ opacity: 0.5;
     color: white;
     text-align: center;
     background-color: rgba(0,0,0,0.4);    font-size: 15px;
+
 }
